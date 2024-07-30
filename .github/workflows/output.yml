@@ -1,0 +1,8 @@
+name: Output information
+on: workflow:dispatch
+jobs:
+   info:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Output Github context
+          run: echo "${{  toJSON(github) }}" #reserved name for github actions functions and expressions, get the metadata and output it
